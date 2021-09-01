@@ -22,6 +22,7 @@ module Sorcery
         auth_hash(access_token).tap do |h|
           h[:user_info] = JSON.parse(response.body)
           h[:user_info]['email'] = h[:user_info]['user']['email']
+          h[:user_info]['slack_avatar'] = h[:user_info]['user']['image_48']
           h[:uid] = h[:user_info]['user']['id']
         end
       end
