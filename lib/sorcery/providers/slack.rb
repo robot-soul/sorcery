@@ -10,7 +10,7 @@ module Sorcery
       def initialize
         super
 
-        @scope          = 'identity.basic, identity.email'
+        @scope          = 'identity.basic, identity.email, identity.avatar'
         @site           = 'https://slack.com/'
         @user_info_path = 'https://slack.com/api/users.identity'
         @auth_path      = '/oauth/authorize'
